@@ -519,14 +519,16 @@
       blurb: Firmware in assembler and C++ on hardware with kilobytes, not gigabytes.
 
 - id: competitions
-  title: Programming competitions, Russia
+  title: All-Russian Olympiad in Informatics
   period: 1997
   start: 1997
   end: 1997
-  role: Participant
+  role: Finalist
   tech: [Pascal]
-  summary: 1st place in the Moscow programming competition; first tier (4th of about 100) in the national round.
+  summary: 4th of about 100 finalists at the IX All-Russian Olympiad in Informatics, St Petersburg, after winning the Moscow round.
+  link: https://neerc.ifmo.ru/school/archive/1996-1997/ru-olymp-roi-1997-standings.html
+  link_text: official standings
   directions:
     languages:
       rank: 3
-      blurb: 1st place Moscow, 4th of ~100 nationally — the algorithmic foundation under everything since.
+      blurb: 4th of about 100 finalists at the national olympiad, St Petersburg — the algorithmic habits everything since was built on.

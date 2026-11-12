@@ -1,68 +1,87 @@
-# Talks, screencasts and publications. `directions` decides where each appears.
-# TODO (Boris): add title, venue and recording link of the 2026 AI-security talk.
+# Talks, screencasts and publications, newest first. `directions` decides where each appears.
+# Fields: date, title, event, url (event page), video, slides, detail, directions.
+# TODO (Boris): add title, venue, date and recording link of the 2026 AI-security talk.
 - date: 2026
   title: AI security
   event: Public talk, 1 hour
   detail: Threat models for open-weight models and agent harnesses, and the controls that hold when the model cannot be trusted
   directions: [security, ai]
 
-- date: 2015-03
-  title: "Automatisierte Tests, die Spaß machen — Enterprise-Applikationen mit Xtend und Embedded DSLs effektiv testen"
-  event: Eclipse Magazin 3.15
-  detail: article
-  directions: [languages, java]
-
-- date: 2015-11
-  title: Writing tests with Jnario
-  event: Eclipse DemoCamp Bonn
-  detail: 20 min, German
-  directions: [java, languages]
-
-- date: 2014-11
-  title: Write scalable enterprise application tests with Xfactory
-  event: Eclipse DemoCamp Bonn
-  detail: 20 min, German
-  directions: [java, languages]
-
-- date: 2014-10
-  title: Write cool scalable enterprise application tests with Xtend & embedded DSLs
-  event: EclipseCon Europe, Ludwigsburg
-  detail: 35 min, English
-  directions: [java, languages]
-
-- date: 2014-06
-  title: Pay your taxes with Xtext
-  event: Eclipse DemoCamp Kassel
-  detail: 20 min, German
-  directions: [languages]
-
-- date: 2014-05
-  title: Pay your taxes with Xtext — a case study
-  event: XtextCON, Kiel
-  detail: 30 min, English
-  directions: [languages, java]
-
-- date: 2013-12
-  title: Boost JUnit tests with Xtend
-  event: Eclipse DemoCamp Frankfurt
-  detail: 20 min, German
-  directions: [java, languages]
-
-- date: 2013-11
-  title: Boost JUnit tests with Xtend and JMockit
-  event: Eclipse DemoCamp Bonn
-  detail: 20 min, English
-  directions: [java, languages]
-
-- date: 2013-06
-  title: Test-driven development with Jnario
-  event: Eclipse DemoCamp Bonn
-  detail: 20 min, German
-  directions: [java, languages]
-
 - date: ongoing
   title: xtextcasts.org
   event: Screencasts on Xtext and language engineering
-  link: https://xtextcasts.org
-  link_text: xtextcasts.org
+  url: https://xtextcasts.org
   directions: [languages, open-source]
+
+- date: 2015-11-16
+  title: Writing tests with Jnario
+  event: Eclipse DemoCamp November 2015, Bonn
+  url: https://wiki.eclipse.org/Eclipse_DemoCamp_November_2015/Bonn
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: 2015-03
+  title: "Automatisierte Tests, die Spaß machen — Enterprise-Applikationen mit Xtend und Embedded DSLs effektiv testen"
+  event: Eclipse Magazin 3.15
+  url: https://jaxenter.de/ausgaben/eclipse-magazin-3-15
+  detail: article
+  directions: [languages, java]
+
+- date: 2014-11-24
+  title: Write scalable enterprise application tests with Xfactory
+  event: Eclipse DemoCamp November 2014, Bonn
+  url: https://wiki.eclipse.org/Eclipse_DemoCamps_November_2014/Bonn
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: 2014-10-29
+  title: Write cool scalable enterprise application tests with Xtend & embedded DSLs
+  event: EclipseCon Europe 2014, Ludwigsburg
+  url: https://www.eclipsecon.org/europe2014/session/write-cool-scalable-enterprise-application-tests-xtend-embedded-dsls.html
+  video: https://www.youtube.com/watch?v=jCgPfxaY8XQ
+  detail: 35 min, English
+  directions: [java, languages]
+
+- date: 2014-06-10
+  title: Pay your taxes with Xtext
+  event: Eclipse DemoCamp Luna 2014, Kassel
+  url: https://wiki.eclipse.org/Eclipse_DemoCamps_Luna_2014/Kassel
+  detail: 20 min, German
+  directions: [languages]
+
+- date: 2014-06-02
+  title: Pay your taxes with Xtext
+  event: Eclipse DemoCamp Luna 2014, Bonn
+  url: https://wiki.eclipse.org/Eclipse_DemoCamps_Luna_2014/Bonn
+  detail: 20 min, German
+  directions: [languages]
+
+- date: 2014-05-28
+  title: Pay your taxes with Xtext — a case study
+  event: XtextCON 2014, Kiel
+  url: http://xtextcon.org/
+  video: https://vimeo.com/98514374
+  slides: "http://www.xtextcon.org/slides/Pay%20Your%20Taxes%20With%20Xtext%20(Case%20Study)%20-%20Boris%20Brodski.pdf"
+  detail: 30 min, English
+  directions: [languages, java]
+
+- date: 2013-12-12
+  title: Boost JUnit tests with Xtend
+  event: Eclipse DemoCamp November 2013, Frankfurt
+  url: http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Frankfurt
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: 2013-11-18
+  title: Boost JUnit tests with Xtend and JMockit
+  event: Eclipse DemoCamp November 2013, Bonn
+  url: http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Bonn
+  detail: 20 min, English
+  directions: [java, languages]
+
+- date: 2013-06-17
+  title: Test-driven development with Jnario
+  event: Eclipse DemoCamp Kepler 2013, Bonn
+  url: http://wiki.eclipse.org/Eclipse_DemoCamps_Kepler_2013/Bonn
+  detail: 20 min, German
+  directions: [java, languages]

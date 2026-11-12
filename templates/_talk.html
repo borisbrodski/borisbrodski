@@ -1,0 +1,8 @@
+<li>
+  <span class="period">{{ t.date }}</span>
+  <strong>{{ t.title }}</strong> —
+  {% if t.url %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}
+  {% if t.detail %} · {{ t.detail }}{% endif %}
+  {% if t.video %} · <a href="{{ t.video }}">video</a>{% endif %}
+  {% if t.slides %} · <a href="{{ t.slides }}">slides</a>{% endif %}
+</li>

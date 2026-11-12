@@ -68,9 +68,7 @@
 <section>
   <h2>Talks &amp; writing</h2>
   <ul class="talks">
-    {% for t in talks %}
-    <li><span class="period">{{ t.date }}</span> <strong>{{ t.title }}</strong> — {{ t.event }}{% if t.detail %} · {{ t.detail }}{% endif %}{% if t.link %} · <a href="{{ t.link }}">{{ t.link_text or "link" }}</a>{% endif %}</li>
-    {% endfor %}
+    {% for t in talks %}{% include "_talk.html" %}{% endfor %}
   </ul>
 </section>
 {% endif %}
