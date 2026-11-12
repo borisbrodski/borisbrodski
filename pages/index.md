@@ -1,0 +1,3 @@
+Freelance senior software architect in Düsseldorf. My first professional project, in 2001, was a cryptographic file layer; my degree focused on security and verification; for the last eleven years I have been chief architect of a backend platform for the German tax administration. Today the same question — *what still holds when a component is hostile?* — is the one I ask about AI models and the agents built on them.
+
+In between: a scripting language built from scratch, a decade of Xtext and model-driven development, 7-Zip-JBinding since 2007, vision models trained from data collection to a customer app, Rails and Django, and microcontrollers since 1997.

@@ -1,0 +1,532 @@
+# Every project once. `directions` tags it for the spoke pages: rank 1 = headline work for
+# that direction, 2 = strong supporting evidence, 3 = worth a line. `blurb` replaces
+# `summary` on that page so each audience reads the angle that matters to them.
+# Clients are named by sector only, as in the German Qualifikationsprofil.
+
+- id: torhaus
+  title: Torhaus — a secure host for untrusted AI agents
+  period: 2026 –
+  start: 2026
+  role: Founder, architect
+  client: Open source
+  tech: [Python, gVisor, Firecracker, Kubernetes, OPA, eBPF, MCP]
+  summary: Framework that runs any AI agent harness in kernel-enforced compartments with default-deny egress, a credential broker and a tamper-evident audit log — designed on the assumption that the model itself may be hostile.
+  highlights:
+    - Threat model built from the 2026 trojaned-open-weights findings (Cohere/Qwen 3.8, "Model-as-a-Trojan")
+    - Compartments (Zwinger) with data classification, typed one-way channels (Schleuse), a broker that never lets a credential reach the model
+    - Egress gateway, MCP/tool proxy and model proxy as the single, policy-checked path out
+  # TODO: add the repository link once the Torhaus repo is public.
+  featured: true
+  featured_rank: 2
+  directions:
+    security:
+      rank: 1
+      blurb: Secure runtime for AI agents built on the assumption that the model is the attacker. Compartments with data classification, default-deny egress through a single gateway, a broker so credentials never enter the model's environment, honeytokens, and a trojaned-model red-team suite that must fail to exfiltrate in CI.
+    ai:
+      rank: 2
+      blurb: Infrastructure for running coding and research agents on self-hosted models without handing them the keys — the operational side of local AI.
+    open-source:
+      rank: 1
+      blurb: Apache-licensed framework in early development; the umbrella for the agent-security work.
+
+- id: ai-security-research
+  title: AI security — talk and research on trojaned open-weight models
+  period: 2025 –
+  start: 2025
+  role: Speaker, researcher
+  tech: [Open-weight LLMs, llama.cpp, vLLM, agent harnesses, egress analysis]
+  summary: One-hour public talk on AI security; analysis of how open-weight models and agent harnesses leak data (training-proxy artifacts, backdoored weights, prompt-injection-to-RCE) and what deterministic controls stop them.
+  directions:
+    security:
+      rank: 1
+      blurb: One-hour public talk on AI security, and hands-on analysis of the 2026 findings on open-weight models phoning home — reproducing the behaviour locally, reading the research (Model-as-a-Trojan, Back-Reveal, pretraining-poisoning RCE) and deriving the controls that hold when the model cannot be trusted.
+    ai:
+      rank: 2
+      blurb: The security side of running models locally — which harness, proxy and egress settings keep a self-hosted model from becoming an exfiltration channel.
+
+- id: local-ai-stack
+  title: Local AI stack — harnesses, skills and LoRA fine-tuning on own hardware
+  period: 2025 –
+  start: 2025
+  role: Architect, developer
+  tech: [LoRA, llama.cpp, vLLM, Hermes Agent, OpenClaw, Claude Code, Kubernetes, Podman]
+  summary: Running open-weight models on self-hosted GPU hardware; LoRA fine-tuning for domain tasks; configuring and extending coding-agent harnesses with custom skills and tool integrations.
+  directions:
+    ai:
+      rank: 1
+      blurb: Self-hosted inference (llama.cpp, vLLM) on own GPU hardware, LoRA fine-tuning of open-weight models for domain tasks, and daily work with agent harnesses — writing skills, wiring tools and MCP servers, and multi-agent orchestration over Matrix.
+    security:
+      rank: 3
+      blurb: The lab in which the agent-security work is tested — every harness runs behind egress controls.
+
+- id: konsens
+  title: KONSENS — backend platform for German tax administration
+  period: 2012 –
+  start: 2012
+  role: Chief software architect
+  client: Tax administration, NRW
+  scale: 11+ years · 15+ engineers
+  tech: [Java EE, JBoss EAP, Xtext, Hibernate, SOAP, Oracle DB, Eclipse RCP, Vaadin, Maven, Gradle, Puppet, TDD]
+  summary: Technical lead for a backend component of KONSENS, the joint software programme of the German federal and state tax administrations — data management, business processes, integration with numerous external systems.
+  highlights:
+    - Architecture and design authority; coaching a team of 15+ engineers
+    - Text-model-driven development with Xtext at the core of the platform
+    - Test-driven, with infrastructure as code (Puppet)
+  featured: true
+  featured_rank: 1
+  directions:
+    java:
+      rank: 1
+      blurb: Chief architect for a backend component of KONSENS, the joint software programme of Germany's tax administrations. Architecture and design authority for 11+ years, coaching 15+ engineers; JBoss EAP, Hibernate, SOAP integrations with many external systems, Eclipse RCP and Vaadin clients, Maven/Gradle, TDD.
+    security:
+      rank: 2
+      blurb: Eleven years as chief architect in tax administration software — an environment where data protection, auditability and integration with dozens of external systems are hard requirements, not features.
+    languages:
+      rank: 2
+      blurb: Xtext text-model-driven development at the heart of a large public-sector platform — DSLs as the primary specification artefact, with generated persistence, services and UI, maintained over a decade ("Pay your taxes with Xtext", XtextCON 2014).
+    rails:
+      rank: 3
+      blurb: Puppet (Ruby DSL) for the platform's infrastructure as code.
+
+- id: quartet-site
+  title: Web presence for a music quartet
+  period: 12/2022 –
+  start: 2022
+  role: Developer
+  client: Music
+  tech: [Python, Django, PostgreSQL]
+  summary: Development, hosting, backup and maintenance of a Django/PostgreSQL web presence.
+  directions:
+    django:
+      rank: 1
+      blurb: Django/PostgreSQL site built and operated end to end — development, hosting, backups, upgrades.
+
+- id: redmine-plugins
+  title: Redmine plugin suite — development, audit, operation
+  period: 04/2022 –
+  start: 2022
+  role: Developer, auditor
+  client: Energy
+  tech: [Ruby, Ruby on Rails, Redmine, PostgreSQL, Docker, Podman, Restic, JMeter]
+  summary: Large Redmine plugin for data exchange and data maintenance with external systems; security audit of third-party open-source plugins; operation and maintenance of the Redmine installation; backup and anonymisation of production data.
+  highlights:
+    - Plugin for bidirectional data exchange with external systems
+    - Audit of open-source plugins before deployment
+    - Containerised operation (Podman), backup and anonymisation pipeline
+  directions:
+    rails:
+      rank: 1
+      blurb: Large Redmine plugin suite for an energy-sector client — data exchange and maintenance with external systems — plus the operation of the installation itself in Podman, backups with Restic, load testing with JMeter, and the security audit of every third-party plugin before it goes live.
+    open-source:
+      rank: 2
+      blurb: Maintenance of a large set of Redmine plugins and audits of third-party open-source plugins before production use.
+    security:
+      rank: 3
+      blurb: Security audits of third-party Redmine plugins; anonymisation of production data for non-production environments.
+
+- id: catalog-android
+  title: Camera-based cataloguing app for automotive parts
+  period: 10/2022 – 11/2022
+  start: 2022
+  end: 2022
+  role: Developer
+  client: Automotive
+  tech: [Android SDK, Java, PHP, MySQL]
+  summary: Android app for efficient camera-based inventory of car parts, synchronised with the company's internal IT systems.
+  directions:
+    java:
+      rank: 3
+      blurb: Android (Java) app for camera-based parts inventory with synchronisation to internal systems.
+
+- id: ai-trading
+  title: AI-assisted cryptocurrency trading
+  period: 03/2021 – 10/2022
+  start: 2021
+  end: 2022
+  role: Architect, developer
+  client: Gaming industry
+  scale: 2 people
+  tech: [Python, TensorFlow, CUDA, Google Colab, PostgreSQL]
+  summary: Design and training of custom trading models on market data; data pipeline, training infrastructure on CUDA and Colab, evaluation and operation.
+  directions:
+    ai:
+      rank: 1
+      blurb: Custom trading models designed and trained from scratch on market data — feature pipelines in PostgreSQL, TensorFlow training on CUDA and Colab, walk-forward evaluation, and the discipline to tell signal from noise.
+    django:
+      rank: 3
+      blurb: Python data pipeline and PostgreSQL feature store for the trading models.
+
+- id: qt-cmake-port
+  title: Qt application port from Windows to Linux
+  period: 06/2021
+  start: 2021
+  end: 2021
+  role: Developer
+  client: Gaming industry
+  tech: [C++, Qt, CMake, GCC, Make]
+  summary: Ported a C++/Qt application to Linux with a new CMake-based build.
+  directions:
+    systems:
+      rank: 2
+      blurb: C++/Qt application moved from Windows to Linux with a clean CMake build.
+
+- id: catalog-app-prototype
+  title: Catalogue app prototype (Android/iOS)
+  period: 03/2021 – 05/2021
+  start: 2021
+  end: 2021
+  role: Designer, developer
+  client: Automotive
+  tech: [React Native, Symfony, PHP, OpenAPI]
+  summary: Design and prototype of a cross-platform catalogue app — frontend and backend, OpenAPI contract, high security requirements.
+  directions:
+    security:
+      rank: 3
+      blurb: Mobile/backend prototype with explicit high-security requirements — API design under an OpenAPI contract.
+
+- id: covid-mask
+  title: COVID mask detector — vision model from data collection to customer app
+  period: 10/2020 – 06/2021
+  start: 2020
+  end: 2021
+  role: Designer, developer (one-person project)
+  client: Startup
+  tech: [Python, TensorFlow, OpenCV, Gtk, React, Node.js]
+  summary: AI system that acoustically warns people wearing no mask or a badly fitted one. One-person project — data collection, model design and training, deployment, operation, Gtk configuration UI and web monitoring.
+  highlights:
+    - Own dataset collected and labelled; model designed and trained from scratch
+    - Real-time inference on commodity hardware with OpenCV
+    - Customer-facing Gtk configuration app and web monitoring
+  featured: true
+  featured_rank: 3
+  directions:
+    ai:
+      rank: 1
+      blurb: The full loop in one pair of hands — collecting and labelling the dataset, designing and training the detector in TensorFlow, real-time inference with OpenCV, and shipping a Gtk configuration app plus web monitoring to the customer.
+    django:
+      rank: 2
+      blurb: Python end to end — training pipeline, OpenCV inference service and the Gtk desktop application.
+
+- id: python-cpp-bridge
+  title: Python ↔ C++ bridge for a CAD manufacturer
+  period: 03/2020 – 04/2020
+  start: 2020
+  end: 2020
+  role: Developer
+  client: Fashion-design CAD manufacturer
+  tech: [Python, C++, CPython API]
+  summary: Bridge for loading and processing data from Python through a C++ library; supports several Python versions and 32/64-bit architectures; automated tests.
+  directions:
+    systems:
+      rank: 2
+      blurb: Binary bridge between Python and a C++ library across several Python versions and 32/64-bit builds, with an automated test matrix.
+    django:
+      rank: 2
+      blurb: Native extension work — exposing a C++ library to Python across versions and architectures.
+
+- id: xtext-forms
+  title: Web forms generated from Xtext models
+  period: 01/2012 – 06/2012
+  start: 2012
+  end: 2012
+  role: Xtext architect, developer
+  client: Energy
+  scale: 3 people
+  tech: [Java, Xtext 2.1, Xtend, Java EE, JSF, JBoss 5, Hibernate, Oracle DB, IntelliJ]
+  summary: Interactive ten-page web form with extensive business rules, generated from an Xtext DSL — backend and web frontend.
+  directions:
+    languages:
+      rank: 2
+      blurb: Ten-page interactive form with complex business rules expressed in an Xtext DSL and generated into backend and JSF frontend.
+    java:
+      rank: 3
+      blurb: Java EE / JSF application on JBoss 5 with Hibernate, generated from Xtext models.
+
+- id: test-lab
+  title: Software test laboratory
+  period: 10/2011 – 12/2011
+  start: 2011
+  end: 2011
+  role: Analyst, developer
+  client: Energy
+  scale: 2 people
+  tech: [Java EE, JSF, JBoss 5, Hibernate, Oracle DB]
+  summary: Web-based Java enterprise solution for managing complex test workflows of software products inside a large corporation; requirements analysis from customer interviews, backend and frontend.
+  directions:
+    java:
+      rank: 3
+      blurb: Java EE/JSF application for managing test workflows, from requirements interviews to delivery.
+
+- id: workflow-system
+  title: Message-based workflow system
+  period: 12/2010 – 09/2011
+  start: 2010
+  end: 2011
+  role: Web designer, developer
+  client: Statutory accident insurance
+  scale: 4 people
+  tech: [Java, Oracle ADF, JMS, Struts, WebLogic, Ant, Python]
+  summary: Message-based workflow system with multiple sending and receiving parties; web administration UI; Ant-based build tooling and a Python configuration tool.
+  directions:
+    java:
+      rank: 2
+      blurb: JMS-based workflow system on WebLogic with Oracle ADF administration UI; built the Ant build tooling and a Python configuration tool.
+
+- id: redmine-fdd
+  title: Redmine, Git and Gerrit integration for feature-driven development
+  period: 10/2010 – 12/2010
+  start: 2010
+  end: 2010
+  role: Project idea, designer, developer
+  tech: [Ruby, Ruby on Rails, Redmine, Git, Gerrit]
+  summary: Redmine plugin that automates feature branches per issue, monitors them and creates Gerrit review requests from the commits of a selected branch; demo VM with all services preconfigured.
+  directions:
+    rails:
+      rank: 2
+      blurb: Redmine plugin automating the feature-driven workflow — branch per issue, branch monitoring, Gerrit review requests from commits — plus a preconfigured demo VM.
+    open-source:
+      rank: 3
+      blurb: Redmine/Git/Gerrit workflow plugin.
+
+- id: rule-dsl
+  title: Rule DSL for task distribution
+  period: 05/2010 – 06/2010
+  start: 2010
+  end: 2010
+  role: Designer, developer
+  tech: [Java, JavaCC, Eclipse JDT compiler, Drools, RocketJ]
+  summary: Customer-specific rule language for distributing tasks by business attributes — regular expressions, user-defined functions, and DSL-driven tests giving excellent coverage.
+  directions:
+    languages:
+      rank: 2
+      blurb: Rule language for task distribution with regex support and user-defined functions, compiled through the Eclipse JDT compiler; the DSL doubled as the test specification.
+
+- id: javaee-batch
+  title: Java EE framework for asynchronous distributed processing
+  period: 03/2010 – 12/2010
+  start: 2010
+  end: 2010
+  role: Architect, designer, developer
+  tech: [Java EE, JMS, JBoss 5/6, WebLogic 10, JUnit]
+  summary: Platform for work-package-oriented background processes with several kinds of dependencies, independent of application server and database, cluster-capable, with guaranteed data integrity under unstable infrastructure and comprehensive JUnit coverage.
+  directions:
+    java:
+      rank: 2
+      blurb: Work-package batch framework on JMS — dependency types, cluster capability, portability across JBoss and WebLogic, and guaranteed data integrity when the app server or broker fails.
+
+- id: meter-data
+  title: Electricity meter data acquisition
+  period: 02/2010 – 11/2010
+  start: 2010
+  end: 2010
+  role: Architect, Java EE coach
+  client: Energy
+  scale: 3 people
+  tech: [Java EE, JBoss 5, Web services, JMS, Oracle DB 11g, MySQL]
+  summary: Java EE application polling a large number of electricity meters continuously, detecting failed meters and exposing data through a web service — portable across operating systems and databases. Architecture, code review, optimisation and coaching.
+  directions:
+    java:
+      rank: 2
+      blurb: Continuous polling of a large meter fleet with failure detection and a web-service interface; architecture, code reviews and Java EE coaching for the team.
+
+- id: accident-insurance-2
+  title: Statutory accident insurance software — further development
+  period: 08/2009 – 12/2010
+  start: 2009
+  end: 2010
+  role: Designer, developer, coach
+  client: Statutory accident insurance
+  scale: 5 people
+  tech: [Java EE, JMS, JBoss 5, Ruby on Rails, Git, Gerrit, Redmine]
+  summary: New use cases, configuration and optimisation for large data volumes, training for the customer's developers, and an optimised development workflow with Eclipse, Git, Gerrit and Redmine integrated by an own plugin.
+  directions:
+    java:
+      rank: 3
+      blurb: Further development and large-volume optimisation of a Java EE case-management system; trained the customer's developers.
+    rails:
+      rank: 3
+      blurb: Rails-based Redmine plugin integrating Git and Gerrit into the team's workflow.
+
+- id: mdsd-framework
+  title: Software industrialisation with model-driven development
+  period: 06/2008 – 11/2010
+  start: 2008
+  end: 2010
+  role: Project initiator, DSL designer, developer
+  client: Internal
+  scale: 2 people
+  tech: [Java, Xtext 1.0, Java EE 6, JBoss 6, Eclipse RCP, PostgreSQL, Oracle DB]
+  summary: Generic rapid-application-development framework on MDA principles — DSLs describing data model and GUI masks, generating persistence, server converters and client mask definitions with business constraints; Maven build and prototype.
+  directions:
+    languages:
+      rank: 1
+      blurb: Two layered DSLs in Xtext 1.0 — a server DSL for the data model and a GUI DSL derived from it — generating persistence, DTO converters and client masks with business constraints. A complete model-driven RAD stack, designed and built as initiator.
+    java:
+      rank: 3
+      blurb: Java EE 6 architecture designed for code generation; Eclipse RCP client.
+
+- id: accident-insurance-1
+  title: Statutory accident insurance software — new development
+  period: 07/2007 – 07/2009
+  start: 2007
+  end: 2009
+  role: Team lead, designer, developer
+  client: Statutory accident insurance
+  scale: 2.5 years · 40 people
+  tech: [Java EE, Hibernate, AspectJ, JBoss 4/5, Eclipse RCP, Enterprise Architect, ANTLR, Oracle DB 11g, PL/SQL]
+  summary: Integrated case-management system for statutory accident insurance — multi-tier JBoss architecture, Eclipse RCP client, analysis of the legacy system (Centura, PL/SQL) and migration. Team lead, persistence tier, base components, document generation, UML-based code generation, integration of signature and ECM systems.
+  directions:
+    java:
+      rank: 2
+      blurb: 40-person project building a multi-tier Java EE case-management system with an Eclipse RCP client — team lead for persistence (Hibernate), base components, RTF/SQL document generation, UML code generation, and the integration of signature and ECM systems.
+    languages:
+      rank: 3
+      blurb: Code generation from UML models (Enterprise Architect) and ANTLR-based parsing in a large Java EE project.
+
+- id: 7zip-jbinding
+  title: 7-Zip-JBinding — Java binding for the 7-Zip compression algorithms
+  period: 11/2007 –
+  start: 2007
+  role: Founder, designer, developer
+  client: Open source
+  tech: [C++, JNI, Java, C++ metaprogramming, CMake, CTest, JUnit, GCC]
+  summary: Platform-independent Java API to the 7-Zip algorithms — JNI-conformant C++ library, archive-format-independent interface, password-protected and multi-part archives, Windows/Linux/macOS in 32 and 64 bit plus ARM, extensive tests on every platform. In production use worldwide since 2007.
+  link: https://sevenzipjbind.sourceforge.net/
+  link_text: sevenzipjbind.sourceforge.net
+  featured: true
+  featured_rank: 4
+  directions:
+    open-source:
+      rank: 1
+      blurb: Founded in 2007 and maintained since — a JNI binding that gives Java the full 7-Zip algorithm set behind an archive-format-independent API. Password-protected and multi-part archives, Windows/Linux/macOS on 32 and 64 bit plus ARM, a test suite that runs on every target. Around ten thousand downloads a month on Maven Central.
+    systems:
+      rank: 1
+      blurb: JNI-conformant C++ library around 7-Zip with heavy C++ metaprogramming, cross-compiled for six platform/architecture combinations with CMake and tested with CTest and JUnit on each.
+    java:
+      rank: 2
+      blurb: Widely used Java library — the archive-format-independent API design and the JNI layer underneath it.
+
+- id: copy-protection
+  title: Copy protection with hardware-bound licences
+  period: 11/2006 – 07/2007
+  start: 2006
+  end: 2007
+  role: Team lead, designer, developer
+  client: Banking, real estate software
+  scale: 2 people
+  tech: [C, C++, Crypto++, Windows WMI API, OLE, Visual Studio]
+  summary: Copy-protection system with licences bound to hardware — cryptographic design of the encryption scheme, licence number format and generator, time-limited and perpetual licences; licence generator and protection component.
+  directions:
+    security:
+      rank: 1
+      blurb: Designed the cryptography of a commercial copy-protection system — licence format and generator, hardware binding via WMI, time-limited and perpetual licences — and led its implementation. Attack surface analysis was part of the design, not an afterthought.
+    systems:
+      rank: 3
+      blurb: Native Windows component in C/C++ with Crypto++ and WMI hardware fingerprinting.
+
+- id: idscript
+  title: IDScript — a general-purpose scripting language
+  period: 07/2002 – 01/2007
+  start: 2002
+  end: 2007
+  role: Designer, developer
+  client: Banking, real estate software
+  scale: 4 years · 2 people
+  tech: [C, C++, OLE, Eclipse RCP, Java, LaTeX, Visual Studio]
+  summary: New version of a company-proprietary language for customer-specific processes — rule sets, workflows, document generation and PDF form evaluation. New syntax and language constructs, high-performance parser, bytecode and runtime, standard library, C ↔ script bridge, generic OLE binding (Word, Excel), plugin interface, bytecode encryption, old-to-new syntax converter, Eclipse RCP-based IDE, LaTeX documentation.
+  highlights:
+    - Parser, bytecode compiler and virtual machine built from scratch
+    - Bidirectional C ↔ script bridge and generic OLE automation
+    - Eclipse RCP IDE and full language documentation
+  featured: true
+  featured_rank: 5
+  directions:
+    languages:
+      rank: 1
+      blurb: A complete language, built over four years — syntax, high-performance parser, bytecode compiler, virtual machine, standard library, a bidirectional C ↔ script bridge, generic OLE automation of Word and Excel, a plugin interface, a converter from the old syntax, an Eclipse RCP IDE and the LaTeX manual. Used in production for rule sets, workflows and document generation.
+    systems:
+      rank: 2
+      blurb: Interpreter and bytecode VM in C/C++ with an OLE automation layer and a plugin ABI.
+    security:
+      rank: 3
+      blurb: Bytecode encryption to protect customer-specific business logic shipped with the product.
+
+- id: crypto-layer
+  title: Cryptographic layer for transparent access to encrypted files
+  period: 07/2001 – 07/2002
+  start: 2001
+  end: 2002
+  role: Designer, developer
+  client: Banking, real estate software
+  tech: [C, C++, Crypto++, Visual Studio]
+  summary: Security component for transparent en-/decryption of files from C/C++ — analysis and integration of existing cryptographic routines; flexible architecture supporting several ciphers with automatic detection behind a stdio-like interface; console tool for manual en-/decryption.
+  directions:
+    security:
+      rank: 1
+      blurb: First professional project, 2001 — a transparent encryption layer for application data. Several ciphers with automatic detection, a stdio-like interface so application code never touches key material, and the audit of the existing cryptographic routines it replaced.
+    systems:
+      rank: 3
+      blurb: C/C++ I/O layer with a stdio-like interface wrapping Crypto++ ciphers.
+
+- id: rtos
+  title: Unix-like real-time operating system (educational)
+  period: 1999 – 2000
+  start: 1999
+  end: 2000
+  role: Author
+  tech: [x86 assembler, Watcom C, 386 protected mode]
+  summary: Self-developed kernel — memory management, boot, scheduler and the fundamental boot-related drivers, in assembler and C on the 386 protected mode.
+  directions:
+    systems:
+      rank: 1
+      blurb: Written at nineteen to understand what an operating system is — boot sequence, protected-mode memory management, scheduler and the drivers needed to get there, in 386 assembler and Watcom C.
+    embedded:
+      rank: 2
+      blurb: Bare-metal kernel work on x86 — the same discipline later applied to microcontrollers.
+    security:
+      rank: 3
+      blurb: Protected-mode memory management and privilege levels, learned by implementing them.
+
+- id: virus-lab
+  title: DOS virus techniques and a matching antivirus (study project)
+  period: 1998 – 1999
+  start: 1998
+  end: 1999
+  role: Author
+  tech: [x86 assembler, DOS]
+  summary: Studied infection, stealth and self-modification techniques of DOS viruses by writing proof-of-concept specimens in an isolated lab, then wrote an antivirus that detected and removed them.
+  directions:
+    security:
+      rank: 2
+      blurb: Where the security thread starts — proof-of-concept DOS viruses written in an isolated lab to understand infection, stealth and self-modifying code, followed by an antivirus that detected and removed them. Harmless by construction; instructive for life.
+    systems:
+      rank: 3
+      blurb: Low-level x86 assembler — interrupt hooking, memory-resident code, file-format surgery.
+
+- id: pic-projects
+  title: PIC microcontroller projects — assembler, C++, Bluetooth LE
+  period: 1997 –
+  start: 1997
+  role: Designer, developer
+  tech: [PIC assembler, XC8 C++, Arduino, Bluetooth 5.0 (Toshiba PAN1762), simulator]
+  summary: Microcontroller work since 1997 — PIC in assembler, later XC8 C++ and Arduino; an IoT device with a Toshiba PAN1762 Bluetooth 5.0 module; an own simulator for firmware testing.
+  directions:
+    embedded:
+      rank: 1
+      blurb: Nearly three decades of PIC — assembler first, XC8 C++ later, Arduino where it fits. An IoT device around the Toshiba PAN1762 Bluetooth 5.0 module, and an own simulator so firmware can be tested before the hardware exists.
+    systems:
+      rank: 3
+      blurb: Firmware in assembler and C++ on hardware with kilobytes, not gigabytes.
+
+- id: competitions
+  title: Programming competitions, Russia
+  period: 1997
+  start: 1997
+  end: 1997
+  role: Participant
+  tech: [Pascal]
+  summary: 1st place in the Moscow programming competition; first tier (4th of about 100) in the national round.
+  directions:
+    languages:
+      rank: 3
+      blurb: 1st place Moscow, 4th of ~100 nationally — the algorithmic foundation under everything since.

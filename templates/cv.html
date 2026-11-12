@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% set is_cv = true %}
+{% block title %}CV — {{ site.name }}{% endblock %}
+{% block description %}Full chronological CV of {{ site.name }}: projects since 2001, skills, talks, education.{% endblock %}
+{% block canonical %}cv/{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="kicker">{{ site.name }} · curriculum vitae</p>
+  <h1>{{ page.title or "Curriculum vitae" }}</h1>
+  {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+  {% if cv_de or cv_pdfs %}
+  <p class="actions">
+    {% if cv_de %}<a class="btn" href="/cv/{{ cv_de }}">Qualifikationsprofil (German, full, PDF)</a>{% endif %}
+    {% for d, path in cv_pdfs %}<a class="btn ghost" href="/{{ path }}">{{ d.nav }} one-pager</a>{% endfor %}
+  </p>
+  {% endif %}
+</section>
+
+{% if page.body %}<section class="prose">{{ page.body | safe }}</section>{% endif %}
+
+<section>
+  <h2>Career</h2>
+  <ul class="plain">
+    {% for e in education.career %}<li><span class="period">{{ e.period }}</span> {{ e.text }}</li>{% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Projects, newest first</h2>
+  <ul class="projects compact">
+    {% for p in projects %}
+    <li class="project" id="{{ p.id }}">
+      <div class="project-meta"><span class="period">{{ p.period }}</span>{% if p.role %}<span class="role">{{ p.role }}</span>{% endif %}{% if p.client %}<span class="client">{{ p.client }}</span>{% endif %}{% if p.scale %}<span class="client">{{ p.scale }}</span>{% endif %}</div>
+      <div class="project-body">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.summary }}</p>
+        {% if p.highlights %}<ul class="highlights">{% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+        {% if p.tech %}<p class="tech">{% for t in p.tech %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+        {% if p.link %}<p><a href="{{ p.link }}">{{ p.link_text or p.link }}</a></p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Skills timeline</h2>
+  <div class="timeline-wrap">{{ timeline | safe }}</div>
+  <div class="skill-groups">
+    {% for g in skills %}
+    <div class="skill-group">
+      <h3>{{ g.name }}</h3>
+      <ul class="skills">
+        {% for s in g.skills %}
+        <li><span class="stars" aria-label="{{ s.level }} of 5">{{ "★" * s.level }}{{ "☆" * (5 - s.level) }}</span> {{ s.name }} <span class="years">{{ s.start }}–{{ s.end or "" }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Education &amp; awards</h2>
+  <ul class="plain">
+    {% for e in education.education %}<li><span class="period">{{ e.period }}</span> {{ e.text | md | safe }}</li>{% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Talks &amp; publications</h2>
+  <ul class="talks">
+    {% for t in talks %}
+    <li><span class="period">{{ t.date }}</span> <strong>{{ t.title }}</strong> — {{ t.event }}{% if t.detail %} · {{ t.detail }}{% endif %}{% if t.link %} · <a href="{{ t.link }}">{{ t.link_text or "link" }}</a>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Languages &amp; beyond code</h2>
+  <p>{{ site.languages }}.</p>
+  <p class="muted">{{ education.beyond }}</p>
+</section>
+{% endblock %}

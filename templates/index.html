@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{{ site.name }} — {{ site.title }}{% endblock %}
+{% block description %}{{ site.tagline }} {{ site.intro_short }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="kicker">{{ site.title }}</p>
+  <h1>{{ site.tagline }}</h1>
+  <div class="lead">{{ page.body | safe }}</div>
+  <p class="actions">
+    <a class="btn" href="/security/">Security &amp; AI security</a>
+    <a class="btn ghost" href="/cv/">Full CV</a>
+    <a class="btn ghost" href="mailto:{{ site.email }}">Get in touch</a>
+  </p>
+</section>
+
+<section>
+  <h2>Now</h2>
+  <div class="cards">
+    {% for n in site.now %}
+    <article class="card">
+      <h3>{{ n.title }}</h3>
+      <p>{{ n.text }}</p>
+      {% if n.link %}<p><a href="{{ n.link }}">{{ n.link_text }}</a></p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Directions</h2>
+  <p class="muted">Twenty-five years of work, filtered by what you are looking for. Each page shows only the projects, skills and talks that matter for that direction.</p>
+  <div class="tiles">
+    {% for d in site.directions %}
+    <a class="tile" href="/{{ d.slug }}/" style="--accent: {{ d.accent }}">
+      <span class="tile-title">{{ d.title }}</span>
+      <span class="tile-text">{{ d.short }}</span>
+      <span class="tile-since">since {{ d.since }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Selected work</h2>
+  <ul class="projects">
+    {% for p in featured %}
+    <li class="project">
+      <div class="project-meta"><span class="period">{{ p.period }}</span>{% if p.role %}<span class="role">{{ p.role }}</span>{% endif %}</div>
+      <div class="project-body">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.summary }}</p>
+        {% if p.tech %}<p class="tech">{% for t in p.tech %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+        {% if p.link %}<p><a href="{{ p.link }}">{{ p.link_text or p.link }}</a></p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>Freelance senior software architect, based in {{ site.location }}, working remotely and on site in Germany and Europe. Languages: {{ site.languages }}.</p>
+  <p><a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+</section>
+{% endblock %}

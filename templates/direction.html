@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}{{ direction.title }} — {{ site.name }}{% endblock %}
+{% block description %}{{ page.description or direction.short }}{% endblock %}
+{% block canonical %}{{ direction.slug }}/{% endblock %}
+
+{% block content %}
+<section class="hero direction" style="--accent: {{ direction.accent }}">
+  <p class="kicker">{{ site.name }} · {{ direction.nav }} · since {{ direction.since }}</p>
+  <h1>{{ page.title or direction.title }}</h1>
+  {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+  {% if page.pitch %}
+  <ul class="pitch">
+    {% for item in page.pitch %}<li>{{ item | md | safe }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+  <p class="actions">
+    {% if cv_pdf %}<a class="btn" href="/{{ cv_pdf }}">One-page CV for {{ direction.nav }} (PDF)</a>{% endif %}
+    <a class="btn ghost" href="mailto:{{ site.email }}?subject={{ direction.nav | urlencode }}">Get in touch</a>
+  </p>
+</section>
+
+{% if page.body %}
+<section class="prose">
+  {{ page.body | safe }}
+</section>
+{% endif %}
+
+{% if projects %}
+<section>
+  <h2>Relevant work</h2>
+  <ul class="projects">
+    {% for p in projects %}
+    <li class="project{% if p.rank == 1 %} primary{% endif %}">
+      <div class="project-meta"><span class="period">{{ p.period }}</span>{% if p.role %}<span class="role">{{ p.role }}</span>{% endif %}{% if p.client %}<span class="client">{{ p.client }}</span>{% endif %}{% if p.scale %}<span class="client">{{ p.scale }}</span>{% endif %}</div>
+      <div class="project-body">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.blurb }}</p>
+        {% if p.highlights %}<ul class="highlights">{% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+        {% if p.tech %}<p class="tech">{% for t in p.tech %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+        {% if p.link %}<p><a href="{{ p.link }}">{{ p.link_text or p.link }}</a></p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if skills %}
+<section>
+  <h2>Skills in this direction</h2>
+  <div class="timeline-wrap">{{ timeline | safe }}</div>
+  <div class="skill-groups">
+    {% for g in skills %}
+    <div class="skill-group">
+      <h3>{{ g.name }}</h3>
+      <ul class="skills">
+        {% for s in g.skills %}
+        <li><span class="stars" aria-label="{{ s.level }} of 5">{{ "★" * s.level }}{{ "☆" * (5 - s.level) }}</span> {{ s.name }} <span class="years">{{ s.start }}–{{ s.end or "" }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if talks %}
+<section>
+  <h2>Talks &amp; writing</h2>
+  <ul class="talks">
+    {% for t in talks %}
+    <li><span class="period">{{ t.date }}</span> <strong>{{ t.title }}</strong> — {{ t.event }}{% if t.detail %} · {{ t.detail }}{% endif %}{% if t.link %} · <a href="{{ t.link }}">{{ t.link_text or "link" }}</a>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if related %}
+<section class="related">
+  <h2>Related directions</h2>
+  <p>{% for r in related %}<a class="chip" href="/{{ r.slug }}/">{{ r.title }}</a>{% endfor %}</p>
+</section>
+{% endif %}
+{% endblock %}

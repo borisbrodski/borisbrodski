@@ -1,0 +1,95 @@
+# Skills, grouped. level 1–5; end: null means "still in use". `directions` decides on which
+# spoke pages a skill appears; the CV page shows everything.
+- name: Security
+  skills:
+    - {name: Security-conscious design, level: 5, start: 1998, end: null, directions: [security, java, systems]}
+    - {name: AI security — trojaned models, agent sandboxing, egress control, short: "AI security", level: 4, start: 2025, end: null, directions: [security, ai]}
+    - {name: "Cryptography: ciphers (AES, RSA, DES), Crypto++", short: "Cryptography, Crypto++", level: 5, start: 2001, end: 2009, directions: [security, systems]}
+    - {name: Public-key infrastructure (PKI), level: 4, start: 2005, end: 2009, directions: [security]}
+    - {name: Network security, level: 4, start: 2005, end: 2008, directions: [security]}
+    - {name: "Reverse engineering: x86 disassembly, OllyDbg, assembler-level debugging", short: "Reverse engineering (x86, OllyDbg)", level: 4, start: 1997, end: 2009, directions: [security, systems]}
+    - {name: Java bytecode analysis & injection, level: 4, start: 2010, end: null, directions: [security, java]}
+    - {name: Copy protection & licensing, level: 4, start: 2006, end: 2007, directions: [security]}
+    - {name: "Container hardening: gVisor, Firecracker, seccomp, network policy", short: "Container hardening", level: 4, start: 2025, end: null, directions: [security, ai]}
+
+- name: AI & machine learning
+  skills:
+    - {name: Python, level: 5, start: 2011, end: null, directions: [ai, django, languages]}
+    - {name: NumPy, TensorFlow, Numba, CUDA, level: 5, start: 2018, end: null, directions: [ai]}
+    - {name: Supervised learning & computer vision (OpenCV), short: "Supervised learning / vision", level: 5, start: 2020, end: null, directions: [ai]}
+    - {name: LoRA fine-tuning of open-weight LLMs, short: "LoRA fine-tuning", level: 4, start: 2025, end: null, directions: [ai, security]}
+    - {name: Local inference (llama.cpp, vLLM) & agent harnesses, short: "Local LLMs & agent harnesses", level: 4, start: 2025, end: null, directions: [ai, security]}
+    - {name: Agent skill & MCP tool development, short: "Agent skills & MCP tools", level: 4, start: 2025, end: null, directions: [ai]}
+    - {name: Reinforcement learning, level: 3, start: 2020, end: null, directions: [ai]}
+    - {name: Statistics / R, level: 2, start: 2019, end: null, directions: [ai]}
+
+- name: Languages & DSLs
+  skills:
+    - {name: Parser, compiler & DSL design, level: 5, start: 2002, end: null, directions: [languages]}
+    - {name: Interpreter & bytecode VM design, level: 5, start: 2002, end: 2007, directions: [languages, systems]}
+    - {name: Xtext / Xtend, level: 5, start: 2006, end: null, directions: [languages, java]}
+    - {name: Langium, level: 4, start: 2023, end: null, directions: [languages]}
+    - {name: Eclipse Modeling Framework (EMF), short: "Eclipse EMF", level: 5, start: 2016, end: null, directions: [languages, java]}
+    - {name: Model-driven architecture (MDA / MDSD), short: "Model-driven development", level: 5, start: 2006, end: null, directions: [languages, java]}
+    - {name: JavaCC, level: 5, start: 2004, end: 2010, directions: [languages]}
+    - {name: Yacc / Bison, level: 4, start: 2005, end: 2007, directions: [languages]}
+    - {name: ANTLR, level: 3, start: 2008, end: 2010, directions: [languages]}
+    - {name: Haskell, level: 4, start: 2004, end: 2009, directions: [languages]}
+
+- name: Java
+  skills:
+    - {name: Java, level: 5, start: 2002, end: null, directions: [java, languages]}
+    - {name: Java EE / Jakarta EE, level: 5, start: 2007, end: null, directions: [java]}
+    - {name: JBoss EAP / WildFly, level: 5, start: 2007, end: null, directions: [java]}
+    - {name: Hibernate / JPA, level: 5, start: 2005, end: null, directions: [java]}
+    - {name: SWT / JFace / Eclipse RCP, level: 5, start: 2005, end: null, directions: [java, languages]}
+    - {name: Test-driven development, JUnit, short: "TDD / JUnit", level: 5, start: 2011, end: null, directions: [java, rails, django]}
+    - {name: Maven / Gradle, level: 4, start: 2006, end: null, directions: [java]}
+    - {name: JMS, level: 5, start: 2008, end: 2010, directions: [java]}
+    - {name: JSF (PrimeFaces, ICEfaces, MyFaces), short: "JSF", level: 4, start: 2006, end: 2019, directions: [java]}
+    - {name: Vaadin, level: 3, start: 2020, end: null, directions: [java]}
+    - {name: JAAS / Elytron, level: 3, start: 2007, end: 2022, directions: [java, security]}
+    - {name: WebLogic / Oracle ADF, level: 4, start: 2009, end: 2011, directions: [java]}
+    - {name: Android, level: 3, start: 2016, end: 2022, directions: [java]}
+    - {name: Kotlin, level: 4, start: 2021, end: null, directions: [java]}
+
+- name: Web
+  skills:
+    - {name: Ruby, level: 5, start: 2008, end: null, directions: [rails]}
+    - {name: Ruby on Rails / Redmine, level: 5, start: 2010, end: null, directions: [rails, open-source]}
+    - {name: Puppet, level: 5, start: 2020, end: null, directions: [rails, java]}
+    - {name: Django, level: 4, start: 2022, end: null, directions: [django]}
+    - {name: PostgreSQL, level: 4, start: 2006, end: null, directions: [django, rails, java]}
+    - {name: MySQL, level: 4, start: 2002, end: null, directions: [rails, django]}
+    - {name: Oracle DB / PL/SQL, level: 4, start: 2000, end: null, directions: [java]}
+    - {name: HTML / CSS / JavaScript, level: 4, start: 1998, end: null, directions: [django, rails]}
+    - {name: React / React Native, level: 4, start: 2020, end: null, directions: [django, rails]}
+    - {name: Node.js, level: 3, start: 2021, end: null, directions: [django]}
+    - {name: OpenAPI / Swagger, level: 3, start: 2021, end: null, directions: [django, rails, java]}
+
+- name: Infrastructure
+  skills:
+    - {name: Linux (Debian/Ubuntu), bash, short: "Linux / bash", level: 5, start: 2004, end: null, directions: [systems, rails, django, security]}
+    - {name: Docker, level: 4, start: 2018, end: null, directions: [rails, django, java, security]}
+    - {name: Podman, level: 4, start: 2022, end: null, directions: [rails, django, security]}
+    - {name: Kubernetes, level: 4, start: 2024, end: null, directions: [java, security, ai, rails, django]}
+    - {name: systemd, level: 4, start: 2020, end: null, directions: [systems, security]}
+    - {name: Git / Gerrit, level: 5, start: 2009, end: null, directions: [java, rails, open-source]}
+    - {name: Neovim, level: 5, start: 2011, end: null, directions: [open-source]}
+    - {name: LaTeX / TikZ, level: 5, start: 2004, end: null, directions: [languages]}
+
+- name: Systems & embedded
+  skills:
+    - {name: C / C++, level: 5, start: 1999, end: null, directions: [systems, embedded]}
+    - {name: C++ metaprogramming, level: 5, start: 2007, end: null, directions: [systems]}
+    - {name: JNI, level: 5, start: 2007, end: null, directions: [systems, java]}
+    - {name: GCC / CMake / Autoconf / Make, level: 5, start: 1999, end: null, directions: [systems, embedded]}
+    - {name: Cross-platform builds (Linux, macOS, Windows, ARM), short: "Cross-platform builds", level: 4, start: 2009, end: null, directions: [systems]}
+    - {name: Windows API / OLE, level: 4, start: 2003, end: 2007, directions: [systems]}
+    - {name: Qt, level: 3, start: 2021, end: 2021, directions: [systems]}
+    - {name: x86 assembler, 386 protected mode, short: "x86 assembler", level: 5, start: 1997, end: 2000, directions: [systems, security]}
+    - {name: PIC microcontroller assembler, level: 5, start: 1997, end: 2018, directions: [embedded]}
+    - {name: PIC C++ (XC8), level: 4, start: 2015, end: null, directions: [embedded]}
+    - {name: Arduino, level: 3, start: 2015, end: null, directions: [embedded]}
+    - {name: Bluetooth 5.0 (Toshiba PAN1762), short: "Bluetooth 5.0", level: 3, start: 2015, end: 2016, directions: [embedded]}
+    - {name: Blender & Blender Python API, short: "Blender / Python API", level: 4, start: 2012, end: null, directions: [django]}

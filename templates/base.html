@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site.name }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
+<meta name="author" content="{{ site.name }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+<meta property="og:site_name" content="{{ site.domain }}">
+<link rel="canonical" href="https://{{ site.domain }}/{% block canonical %}{% endblock %}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script>
+  /* Theme: follow the system unless the visitor chose one. Storage is a per-browser convenience only. */
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="brand-name">{{ site.name }}</span><span class="brand-sub">{{ site.title }}</span></a>
+    <nav class="nav" aria-label="Directions">
+      {% for d in site.directions %}
+      <a href="/{{ d.slug }}/"{% if direction and direction.slug == d.slug %} aria-current="page"{% endif %}>{{ d.nav }}</a>
+      {% endfor %}
+      <a href="/cv/"{% if is_cv %} aria-current="page"{% endif %}>CV</a>
+    </nav>
+    <button class="theme" type="button" aria-label="Toggle colour theme" title="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>{{ site.name }}</strong> · {{ site.location }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="https://github.com/{{ site.github }}">GitHub</a> · <a href="{{ site.opensource_hub }}">openbrod.org</a></p>
+    <p class="muted">© {{ year }} {{ site.name }}. Built from plain data files with a 150-line Python script — <a href="https://github.com/{{ site.github }}/{{ site.github }}">source</a>.</p>
+  </div>
+</footer>
+<script>
+  document.querySelector('.theme').addEventListener('click', function () {
+    var root = document.documentElement;
+    var dark = root.getAttribute('data-theme') === 'dark' ||
+      (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+</script>
+</body>
+</html>

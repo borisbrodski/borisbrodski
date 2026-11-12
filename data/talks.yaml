@@ -1,0 +1,68 @@
+# Talks, screencasts and publications. `directions` decides where each appears.
+# TODO (Boris): add title, venue and recording link of the 2026 AI-security talk.
+- date: 2026
+  title: AI security
+  event: Public talk, 1 hour
+  detail: Threat models for open-weight models and agent harnesses, and the controls that hold when the model cannot be trusted
+  directions: [security, ai]
+
+- date: 2015-03
+  title: "Automatisierte Tests, die Spaß machen — Enterprise-Applikationen mit Xtend und Embedded DSLs effektiv testen"
+  event: Eclipse Magazin 3.15
+  detail: article
+  directions: [languages, java]
+
+- date: 2015-11
+  title: Writing tests with Jnario
+  event: Eclipse DemoCamp Bonn
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: 2014-11
+  title: Write scalable enterprise application tests with Xfactory
+  event: Eclipse DemoCamp Bonn
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: 2014-10
+  title: Write cool scalable enterprise application tests with Xtend & embedded DSLs
+  event: EclipseCon Europe, Ludwigsburg
+  detail: 35 min, English
+  directions: [java, languages]
+
+- date: 2014-06
+  title: Pay your taxes with Xtext
+  event: Eclipse DemoCamp Kassel
+  detail: 20 min, German
+  directions: [languages]
+
+- date: 2014-05
+  title: Pay your taxes with Xtext — a case study
+  event: XtextCON, Kiel
+  detail: 30 min, English
+  directions: [languages, java]
+
+- date: 2013-12
+  title: Boost JUnit tests with Xtend
+  event: Eclipse DemoCamp Frankfurt
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: 2013-11
+  title: Boost JUnit tests with Xtend and JMockit
+  event: Eclipse DemoCamp Bonn
+  detail: 20 min, English
+  directions: [java, languages]
+
+- date: 2013-06
+  title: Test-driven development with Jnario
+  event: Eclipse DemoCamp Bonn
+  detail: 20 min, German
+  directions: [java, languages]
+
+- date: ongoing
+  title: xtextcasts.org
+  event: Screencasts on Xtext and language engineering
+  link: https://xtextcasts.org
+  link_text: xtextcasts.org
+  directions: [languages, open-source]

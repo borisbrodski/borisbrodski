@@ -1,0 +1,21 @@
+career:
+  - period: 2011 –
+    text: Freelance senior software architect — chief architect in tax-administration software since 2012; AI, security and open-source work alongside.
+  - period: 2007 – 2011
+    text: Steria Mummert Consulting, Public Services — consultant, from 2011 senior consultant. Public-sector Java EE projects, architecture proposals, coaching.
+  - period: 2001 – 2007
+    text: Software developer at a vendor for banking and real-estate software — cryptographic layer, the IDScript language, copy protection.
+
+education:
+  - period: 2001 – 2007
+    text: "**Diplom-Informatiker, TU Dortmund** — focus area *Sicherheit und Verifikation* (security and verification), minor in physics, overall grade *sehr gut* (1.5)."
+  - period: 2018 – 2019
+    text: Deep Learning Specialization (deeplearning.ai, five courses) and Reinforcement Learning (Coursera).
+  - period: 2019 –
+    text: MIT 18.650 Statistics for Applications (online).
+  - period: 2011
+    text: Certified SOPERA Developer and Administrator (SOA platform).
+  - period: 1997
+    text: "Programming competitions, Russia: 1st place Moscow; first tier (4th of ~100) in the national round."
+
+beyond: "Unicycling — 26-inch touring unicycle, ultimate wheel, volunteer coach at a high school. Diving (AOWD), kung fu, skiing and snowboarding, chess, pool billiard."

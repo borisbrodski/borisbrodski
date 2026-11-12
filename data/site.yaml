@@ -1,0 +1,92 @@
+# Site-wide facts. Public information only — no phone, no street address, no birth date.
+name: Boris Brodski
+title: Software architect · AI security
+tagline: Security from the transistor to the model.
+intro_short: Freelance senior software architect in Düsseldorf — 25 years from cryptography and kernels to Java enterprise platforms and AI security.
+location: Düsseldorf, Germany
+email: Boris@Brodski.name
+github: borisbrodski
+domain: brodski.name
+opensource_hub: https://openbrod.org
+languages: "English (fluent), German (near-native), Russian (native), Hebrew (intermediate), French (beginner)"
+
+# The three "Now" cards on the hub.
+now:
+  - title: AI security
+    text: A one-hour public talk on AI security; hands-on research on trojaned open-weight models and agent data exfiltration; Torhaus — a secure host for untrusted AI agents.
+    link: /security/
+    link_text: Security & AI security →
+  - title: Local AI, end to end
+    text: Vision models trained from data collection to a customer-facing app; LoRA fine-tuning and agent harnesses on self-hosted models; skill development for coding agents.
+    link: /ai/
+    link_text: AI & machine learning →
+  - title: Architecture at scale
+    text: Chief architect since 2012 on a public-sector Java EE platform with 15+ engineers; Kubernetes, Podman and Puppet for the infrastructure around it.
+    link: /java/
+    link_text: Java enterprise →
+
+# Directions = the spoke pages. Order here is the navigation order.
+directions:
+  - slug: security
+    nav: Security
+    title: Security & AI security
+    short: Cryptography, reverse engineering, hardened architectures — and now the security of AI models and agents.
+    since: 1998
+    accent: "#8b2f2f"
+    related: [ai, systems, java]
+  - slug: ai
+    nav: AI
+    title: AI & machine learning
+    short: Vision models from zero to production, trading models, LoRA fine-tuning, local agent harnesses.
+    since: 2018
+    accent: "#6b3fa0"
+    related: [security, django, languages]
+  - slug: languages
+    nav: Languages
+    title: Programming languages & DSLs
+    short: Compilers, interpreters, Xtext and Langium, model-driven development, xtextcasts.org.
+    since: 2002
+    accent: "#1f5f8b"
+    related: [java, systems, open-source]
+  - slug: java
+    nav: Java EE
+    title: Java enterprise
+    short: Chief architect on a tax-administration platform; JBoss EAP, Hibernate, Eclipse RCP, Vaadin; coaching large teams.
+    since: 2002
+    accent: "#b35c1e"
+    related: [languages, security, rails]
+  - slug: django
+    nav: Django
+    title: Python & Django
+    short: Django web applications, Python tooling, Python–C++ bridges, Blender scripting.
+    since: 2011
+    accent: "#2d6a4f"
+    related: [ai, rails, systems]
+  - slug: rails
+    nav: Rails
+    title: Ruby on Rails
+    short: Redmine plugin suites, audits and hosting; Rails since 2010, Ruby since 2008, Puppet.
+    since: 2008
+    accent: "#a3242f"
+    related: [django, java, open-source]
+  - slug: embedded
+    nav: Embedded
+    title: Microcontrollers & IoT
+    short: PIC assembler and C++, Arduino, Bluetooth LE, hardware the software has to respect.
+    since: 1997
+    accent: "#4d6a2f"
+    related: [systems, security]
+  - slug: systems
+    nav: Systems
+    title: Systems & C/C++
+    short: An operating system kernel at 19, JNI bindings, cross-platform C++ builds, Python–C++ bridges.
+    since: 1999
+    accent: "#3f4a5c"
+    related: [embedded, languages, security]
+  - slug: open-source
+    nav: Open Source
+    title: Open source
+    short: 7-Zip-JBinding since 2007, Redmine plugins, xtextcasts.org, Torhaus — all under openbrod.org.
+    since: 2007
+    accent: "#1a7a6b"
+    related: [languages, rails, security]
