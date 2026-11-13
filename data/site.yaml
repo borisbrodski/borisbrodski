@@ -6,14 +6,15 @@ intro_short: Freelance senior software architect in Düsseldorf — 25 years fro
 location: Düsseldorf, Germany
 email: Boris@Brodski.name
 github: borisbrodski
+x: BorisBrodski
 domain: brodski.name
 opensource_hub: https://openbrod.org
 languages: "English (fluent), German (near-native), Russian (native), Hebrew (intermediate), French (beginner)"
 
 # The three "Now" cards on the hub.
 now:
-  - title: AI security
-    text: A one-hour public talk on AI security; hands-on research on trojaned open-weight models and agent data exfiltration; Torhaus — a secure host for untrusted AI agents.
+  - title: AI safety & security
+    text: A one-hour public lecture introducing AI safety (Russian, with an English version); hands-on research on trojaned open-weight models and agent data exfiltration; Torhaus — a secure host for untrusted AI agents.
     link: /security/
     link_text: Security & AI security →
   - title: Local AI, end to end

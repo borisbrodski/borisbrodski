@@ -1,13 +1,14 @@
 # Talks, screencasts and publications, newest first. `directions` decides where each appears.
 # Fields: date, title, event, url (event page), video, slides, detail, directions.
-# TODO (Boris): add the exact title, venue and date of the 2026 AI-security talk.
-- date: 2026
-  title: AI security
-  event: Public talk, 1 hour
-  detail: Threat models for open-weight models and agent harnesses, and the controls that hold when the model cannot be trusted
+# TODO (Boris): exact date of the live lecture (October 2026?) and, if wanted, the link to the
+# full 3 h 44 min recording with discussion on The root of liberty channel.
+- date: 2026-10
+  title: "AI: a giant leap — into heaven or hell? An introduction to AI safety"
+  event: Public lecture, lecture series of The root of liberty
+  detail: "57 min, Russian · how LLMs and agents work, the control problem (reward hacking, the stop button, corrigibility), reasoning tokens and neuralese, AGI and what comes after"
   videos:
-    - {url: "https://youtu.be/e-0_39vcfgY", label: English}
-    - {url: "https://youtu.be/OMsONFIx_p8", label: Russian}
+    - {url: "https://youtu.be/OMsONFIx_p8", label: "Russian original, 57 min"}
+    - {url: "https://youtu.be/e-0_39vcfgY", label: "English, AI-dubbed, 42 min"}
   directions: [security, ai]
 
 - date: ongoing

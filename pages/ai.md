@@ -18,7 +18,7 @@ The trading work was the opposite kind of problem: data in abundance, signal sca
 
 ## Local LLMs, LoRA and agents
 
-Since 2025 the focus is open-weight language models on own GPU hardware: serving with llama.cpp and vLLM, LoRA fine-tuning for domain tasks, and the agent harnesses on top — writing skills, wiring tools and MCP servers, orchestrating several agents over Matrix. The security of that stack is its own topic; see [Security & AI security](/security/).
+Since 2025 the focus is open-weight language models on own GPU hardware: serving with llama.cpp and vLLM, LoRA fine-tuning for domain tasks, and the agent harnesses on top — writing skills, wiring tools and MCP servers, orchestrating several agents over Matrix. The security of that stack is its own topic; see [Security & AI security](/security/). For a general-audience introduction to what these systems are and why controlling them is hard, there is my one-hour lecture *AI: a giant leap — into heaven or hell?* ([Russian](https://youtu.be/OMsONFIx_p8) · [English](https://youtu.be/e-0_39vcfgY)).
 
 ## What I do for clients
 

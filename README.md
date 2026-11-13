@@ -1,12 +1,12 @@
 # Boris Brodski
 
-**Software architect · AI security** — Düsseldorf, Germany · [brodski.name](https://brodski.name) · [openbrod.org](https://openbrod.org) · Boris@Brodski.name
+**Software architect · AI security** — Düsseldorf, Germany · [brodski.name](https://brodski.name) · [openbrod.org](https://openbrod.org) · [x.com/BorisBrodski](https://x.com/BorisBrodski) · Boris@Brodski.name
 
 Security from the transistor to the model. Twenty-five years from a cryptographic file layer (2001) and a degree focused on *security and verification*, through eleven years as chief architect of a backend platform for the German tax administration, to AI security today: trojaned open-weight models, agent harnesses, and **Torhaus** — a secure host for untrusted AI agents.
 
 | Direction | What you'll find |
 |---|---|
-| [Security & AI security](https://brodski.name/security/) | Cryptographic design, reverse engineering (x86, OllyDbg, Java bytecode), hardened architectures, AI-security talk, Torhaus |
+| [Security & AI security](https://brodski.name/security/) | Cryptographic design, reverse engineering (x86, OllyDbg, Java bytecode), hardened architectures, the AI-safety lecture, Torhaus |
 | [AI & machine learning](https://brodski.name/ai/) | Vision models from data collection to customer app, trading models, LoRA fine-tuning, local agent harnesses |
 | [Languages & DSLs](https://brodski.name/languages/) | IDScript (a language built from parser to IDE), Xtext since 2006, Langium, [xtextcasts.org](https://xtextcasts.org) |
 | [Java enterprise](https://brodski.name/java/) | Chief architect on KONSENS since 2012; JBoss EAP, Hibernate, Eclipse RCP, Vaadin, 15+ engineers |
