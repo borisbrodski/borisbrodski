@@ -1,7 +1,6 @@
 # Talks, screencasts and publications, newest first. `directions` decides where each appears.
 # Fields: date, title, event, url (event page), video, slides, detail, directions.
-# TODO (Boris): exact date of the live lecture (October 2026?) and, if wanted, the link to the
-# full 3 h 44 min recording with discussion on The root of liberty channel.
+# TODO (Boris): exact date of the live lecture (October 2026?). Only the lecture cuts are linked, by design.
 - date: 2026-10
   title: "AI: a giant leap — into heaven or hell? An introduction to AI safety"
   event: Public lecture, lecture series of The root of liberty
