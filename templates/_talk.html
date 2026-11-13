@@ -4,5 +4,6 @@
   {% if t.url %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}
   {% if t.detail %} · {{ t.detail }}{% endif %}
   {% if t.video %} · <a href="{{ t.video }}">video</a>{% endif %}
+  {% for v in t.videos or [] %} · <a href="{{ v.url }}">video ({{ v.label }})</a>{% endfor %}
   {% if t.slides %} · <a href="{{ t.slides }}">slides</a>{% endif %}
 </li>

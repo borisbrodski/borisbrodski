@@ -36,6 +36,9 @@
   role: Speaker, researcher
   tech: [Open-weight LLMs, llama.cpp, vLLM, agent harnesses, egress analysis]
   summary: One-hour public talk on AI security; analysis of how open-weight models and agent harnesses leak data (training-proxy artifacts, backdoored weights, prompt-injection-to-RCE) and what deterministic controls stop them.
+  links:
+    - {url: "https://youtu.be/e-0_39vcfgY", text: "Talk recording (English)"}
+    - {url: "https://youtu.be/OMsONFIx_p8", text: "Talk recording (Russian)"}
   directions:
     security:
       rank: 1

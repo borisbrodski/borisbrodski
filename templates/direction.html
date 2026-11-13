@@ -37,7 +37,7 @@
         <p>{{ p.blurb }}</p>
         {% if p.highlights %}<ul class="highlights">{% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
         {% if p.tech %}<p class="tech">{% for t in p.tech %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
-        {% if p.link %}<p><a href="{{ p.link }}">{{ p.link_text or p.link }}</a></p>{% endif %}
+        {% if p.link or p.links %}<p class="links">{% if p.link %}<a href="{{ p.link }}">{{ p.link_text or p.link }}</a>{% endif %}{% for l in p.links or [] %}{% if not loop.first or p.link %} · {% endif %}<a href="{{ l.url }}">{{ l.text }}</a>{% endfor %}</p>{% endif %}
       </div>
     </li>
     {% endfor %}

@@ -6,7 +6,7 @@ pitch:
   - "**Degree in security.** Diplom-Informatiker at TU Dortmund, focus area *Sicherheit und Verifikation*, grade 1.5."
   - "**Built the primitives.** Cryptographic file layer (2001), hardware-bound copy protection (2006), PKI and network security, bytecode encryption for a shipped language."
   - "**Thinks like the attacker.** Virus lab and antivirus at 18, x86 reverse engineering with OllyDbg, Java bytecode analysis and injection."
-  - "**Applies it to AI.** One-hour public talk on AI security; hands-on analysis of models that phone home; Torhaus, a secure host for untrusted agents."
+  - "**Applies it to AI.** One-hour public talk on AI security ([English](https://youtu.be/e-0_39vcfgY) · [Russian](https://youtu.be/OMsONFIx_p8)); hands-on analysis of models that phone home; Torhaus, a secure host for untrusted agents."
 ---
 ## The thread
 
@@ -20,7 +20,7 @@ Since 2012 that background has been applied at scale: chief architect of a backe
 
 The same question now applies to models and agents. In 2026 the community documented open-weight models reaching for their vendor's cloud storage from inside sandboxes, LoRA-tuned models that exfiltrate secrets over DNS on their first turn, and pretraining poisoning that plants remote-code-execution backdoors in coding agents. A reasoning trace is not a security boundary; only deterministic code outside the model is.
 
-That is the premise of my one-hour public talk on AI security, of the hands-on reproduction work on self-hosted models, and of **Torhaus** — a framework that runs any agent harness in kernel-enforced compartments with default-deny egress, a credential broker and a tamper-evident audit log, and ships a trojaned-model red-team suite that has to fail to exfiltrate in CI.
+That is the premise of my one-hour public talk on AI security (recorded in [English](https://youtu.be/e-0_39vcfgY) and [Russian](https://youtu.be/OMsONFIx_p8)), of the hands-on reproduction work on self-hosted models, and of **Torhaus** — a framework that runs any agent harness in kernel-enforced compartments with default-deny egress, a credential broker and a tamper-evident audit log, and ships a trojaned-model red-team suite that has to fail to exfiltrate in CI.
 
 ## What I do for clients
 

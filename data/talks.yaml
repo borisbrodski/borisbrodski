@@ -1,10 +1,13 @@
 # Talks, screencasts and publications, newest first. `directions` decides where each appears.
 # Fields: date, title, event, url (event page), video, slides, detail, directions.
-# TODO (Boris): add title, venue, date and recording link of the 2026 AI-security talk.
+# TODO (Boris): add the exact title, venue and date of the 2026 AI-security talk.
 - date: 2026
   title: AI security
   event: Public talk, 1 hour
   detail: Threat models for open-weight models and agent harnesses, and the controls that hold when the model cannot be trusted
+  videos:
+    - {url: "https://youtu.be/e-0_39vcfgY", label: English}
+    - {url: "https://youtu.be/OMsONFIx_p8", label: Russian}
   directions: [security, ai]
 
 - date: ongoing
