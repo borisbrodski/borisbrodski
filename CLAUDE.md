@@ -27,8 +27,10 @@ that is not already on the site. Email `Boris@Brodski.name` and city `Düsseldor
 - Keep the generated `_site/` out of git.
 
 ## PDFs
-Drop `static/cv/boris-brodski-<slug>.pdf` (one-page CV per direction) and `static/cv/*-de.pdf`
-(full German Qualifikationsprofil). The build links them automatically when present.
+Drop `static/cv/boris-brodski-skills.pdf` (skills timeline), `static/cv/boris-brodski-<slug>.pdf`
+(one-page CV per direction) and `static/cv/*-de.pdf` (full German Qualifikationsprofil). The build
+links them automatically when present. The skills PDF is the one with no phone number, street
+address, date of birth, or certificate scans.
 
 ## Verify
 `make serve`, open http://localhost:8000, check a spoke page, the CV page, and phone width.

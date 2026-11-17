@@ -9,9 +9,10 @@
   <p class="kicker">{{ site.name }} · curriculum vitae</p>
   <h1>{{ page.title or "Curriculum vitae" }}</h1>
   {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
-  {% if cv_de or cv_pdfs %}
+  {% if cv_de or skills_pdf or cv_pdfs %}
   <p class="actions">
     {% if cv_de %}<a class="btn" href="/cv/{{ cv_de }}">Qualifikationsprofil (German, full, PDF)</a>{% endif %}
+    {% if skills_pdf %}<a class="btn" href="/{{ skills_pdf }}">Skills (PDF)</a>{% endif %}
     {% for d, path in cv_pdfs %}<a class="btn ghost" href="/{{ path }}">{{ d.nav }} one-pager</a>{% endfor %}
   </p>
   {% endif %}

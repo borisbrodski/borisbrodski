@@ -36,4 +36,4 @@ make deps     # pip install jinja2 pyyaml markdown
 make serve    # build and open http://localhost:8000
 ```
 
-Pushing to `main` builds and deploys through GitHub Actions (`.github/workflows/pages.yml`). PDF downloads are picked up automatically when placed in `static/cv/`: `boris-brodski-<direction>.pdf` for the one-page CVs, and any `*-de.pdf` for the full German profile.
+Pushing to `main` builds and deploys through GitHub Actions (`.github/workflows/pages.yml`). PDF downloads are picked up automatically when placed in `static/cv/`: `boris-brodski-skills.pdf` for the skills timeline, `boris-brodski-<direction>.pdf` for the one-page CVs, and any `*-de.pdf` for the full German profile.

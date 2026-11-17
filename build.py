@@ -160,9 +160,11 @@ def main() -> int:
     (OUT / "CNAME").write_text(site["domain"] + "\n")
 
     cv_dir = STATIC / "cv"
-    cv_de = next((f.name for f in cv_dir.glob("*-de.pdf")), None) if cv_dir.exists() else None
+    cv_de = next((f.name for f in sorted(cv_dir.glob("*-de.pdf"))), None) if cv_dir.exists() else None
+    skills_pdf = "cv/boris-brodski-skills.pdf"
 
-    base = dict(site=site, year=YEAR_NOW, cv_de=cv_de)
+    base = dict(site=site, year=YEAR_NOW, cv_de=cv_de,
+                skills_pdf=skills_pdf if (STATIC / skills_pdf).exists() else None)
     urls = []
 
     def render(template: str, out: Path, **ctx):
